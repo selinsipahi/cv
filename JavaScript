@@ -1,0 +1,26 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to password elements
+    const passwordScreen = document.getElementById("passwordScreen");
+    const passwordForm = document.getElementById("passwordForm");
+    const passwordInput = document.getElementById("passwordInput");
+
+    // Get reference to content
+    const content = document.getElementById("content");
+
+    // Function to handle form submission
+    passwordForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const enteredPassword = passwordInput.value;
+        // Here you can add your logic to check if the entered password is correct
+        // For simplicity, let's assume the correct password is "password"
+        if (enteredPassword === "password") {
+            // Show content if password is correct
+            content.classList.remove("hidden");
+            passwordScreen.classList.add("hidden");
+        } else {
+            // Show error message or handle incorrect password
+            alert("Incorrect password! Please try again.");
+            passwordInput.value = "";
+        }
+    });
+});
