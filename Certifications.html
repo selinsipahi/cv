@@ -12,16 +12,19 @@
     <section class="Certification-sub-header">
         <nav>
             <a href="index.html"><img src="Images/selin-sipahi-LOGO.png"></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="Projects.html">PORTFOLIO</a></li>
-                    <li><a class="active" href="Certifications.html">CERTIFICATIONS</a></li>
-                    <li><a href="Contact.html">CONTACT</a></li>
-                    <li><a href="https://drive.google.com/file/d/1ikMjkRYiWX4Aw3pKj_qwug2Z0Lm1i34z/view?usp=sharing" target="_blank">CV</a></li>
-                </ul>
-            </div>
-        </nav>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Projects.html">PORTFOLIO</a></li>
+                <li><a class="active" href="Certifications.html">CERTIFICATIONS</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a href="https://drive.google.com/file/d/1ikMjkRYiWX4Aw3pKj_qwug2Z0Lm1i34z/view?usp=sharing" target="_blank">CV</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
         <br>
         <br>
         <h1> Certifications</h1>
@@ -226,6 +229,19 @@
     
     </div>
     </section>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>  
 
 </body>
 </html>
