@@ -13,12 +13,14 @@
             color: #777;
         }
     </style>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <section class="header">
 <nav>
     <a href="index.html"><img src="Images/selin-sipahi-LOGO.png"></a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
             <li><a class="active" href="index.html">HOME</a></li>
             <li><a href="Projects.html">PORTFOLIO</a></li>
@@ -27,10 +29,10 @@
             <li><a href="https://drive.google.com/file/d/1ikMjkRYiWX4Aw3pKj_qwug2Z0Lm1i34z/view?usp=sharing" target="_blank">CV</a></li>
         </ul>
     </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
 </nav>
 
 <div class="text-box">
-    <p class="center-align1"> <em> Important Notice: Please View on Desktop</em> </p>
     <h1>Selin's Digital CV</h1>
     <p class="center-align"> Independently coded with HTML and CSS within Visual Studio Code, this digital CV serves as a portfolio and testament to my <br> skills, passion, and dedication to the dynamic field of digital marketing. </p>
 <a href="https://drive.google.com/file/d/1ikMjkRYiWX4Aw3pKj_qwug2Z0Lm1i34z/view?usp=sharing" class="hero-btn" target="_blank">Click to Access Standard CV</a>
@@ -81,7 +83,7 @@
     </div>
     <div class="column3">
         <div class="skills-col">
-            <h3>Communication</h3>
+            <h3 class="communication">Communication</h3>
         </div>
         <div class="skills-col">
             <h3>Project Management</h3>
@@ -255,7 +257,7 @@
 <!---Interests--->
 <br>
 <h1>Interests and Achievements</h1>
-<p class="interests-text">Hover to learn more.</p>
+<p class="interests-text">Hover or tap on the images to learn more.</p>
     <section class="image-container">
         <div class="image-box">
             <img src="Images/Socialmedia.jpg" alt="Image 1">
@@ -317,6 +319,20 @@
 
 
 </section>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>  
+
 
 </body>
 
