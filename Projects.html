@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selin's Digital CV</title>
-    <link rel="icon" type="image/x-icon" href="Images/graduation-cap-solid.svg">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selin's Digital CV</title>
+        <link rel="icon" type="image/x-icon" href="Images/graduation-cap-solid.svg">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-</head>
+    </head>
 <body>
     <section class="sub-header">
         <nav>
             <a href="index.html"><img src="Images/selin-sipahi-LOGO.png"></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a class="active" href="Projects.html">PORTFOLIO</a></li>
@@ -21,10 +23,13 @@
                     <li><a href="https://drive.google.com/file/d/1ikMjkRYiWX4Aw3pKj_qwug2Z0Lm1i34z/view?usp=sharing" target="_blank">CV</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <h1> My Projects</h1>
         <p class="center-align">Discover my portfolio showcasing a diverse range of digital projects that exemplify my <br> strategic approach, passion, and creativity as a digital marketer.</p>  
     </section>
+
+
 
     <!----project content--->
 
@@ -42,6 +47,14 @@
                 <h3><em>Reigniting Gen Z's declining interest in Glastonbury Festival</em></h3>
                 <p>Delve into this presentation to witness how I harnessed data insights, market analysis, and my understanding of various marketing channels, customer preferences, and the marketing mix to attract Gen Z to Glastonbury Festival.</p>
                 <p style="text-align: center;"><em>If unavailable, please download a copy.</em></p>
+                <style>
+                    @media only screen and (max-width: 600px) {
+                        .button-container a {
+                            font-size: 0.7em;
+                            padding: 6px 10px;
+                        }
+                    }
+                </style>
                 <div class="button-container">
                 <a href="https://onedrive.live.com/download?resid=E120313981E3BDFA%21294&authkey=!AHPlLKoZAJXihZw" download target="_blank" class="hero-btn red-btn">DOWNLOAD PPT.</a>
             </div>
@@ -312,7 +325,6 @@
     <div class="row">
         <div class="project-col-facebook-file-text">
             <br>
-            <h2>Facebook File</h2>
             <a href="https://drive.google.com/file/d/1IhC4qaRqvfLU5nYwX4K__sLNVvwS1ehn/view?usp=sharing" target="_blank">
                 <img src="Images/Facebook File 1.png">
             </a>
@@ -398,6 +410,19 @@
     
     </div>
     </section>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>  
 
 </body>
 </html>
