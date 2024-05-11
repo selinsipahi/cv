@@ -93,6 +93,68 @@ color: #fff;
     transition: 1s;
 }
 
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links{
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+    }
+
+    .nav-links ul li{
+        display: block;
+        padding: 8px 0;
+    }
+
+    .nav-links ul li a {
+        display: block; /* Adjust display for anchor elements */
+        padding: 10px;
+    }
+
+    nav .fa-bars {
+        display: inline-block; /* Hide the hamburger icon */
+        color: #fff;
+        margin: 10px;
+        margin-right: 25px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    nav .fa-times {
+        display: inline-block; /* Show the close icon */
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 28px;
+    }
+
+    nav img {
+        width: 48px; /* Adjust the width as needed */
+    }
+}
+
+@media (min-width: 701px) {
+    .nav-links ul li {
+        display: inline-block; /* Revert to inline-block for larger screens */
+    }
+}
+
 /*------personal statement------*/
 
 .personalstatement{
@@ -164,6 +226,7 @@ p{
     margin-left:8%;
     margin-right:8%;
    flex-basis: content;
+   flex: 1;
 }
 
 h3{
@@ -171,6 +234,10 @@ h3{
     font-weight: 600;
     margin: 20px 0;
 
+}
+
+.skills-col h3{
+    font-size: 15px;
 }
 
 /*--.row {
@@ -214,6 +281,37 @@ h3{
 .skills-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
+
+/* Media query for smaller screens */
+@media (max-width: 700px) {
+    /* Adjusted styles for smaller screens */
+    .column1,
+    .column2,
+    .column3 {
+        width: 100%; /* Full width for each column on smaller screens */
+        margin: 0; /* Remove margin for smaller screens */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills-col {
+        width: calc(50% - 16px); /* 50% width for each box on smaller screens */
+        margin: 8px; /* Adjusted margin for smaller screens */
+    }
+
+    .skills-col h3{
+        font-size: 11px;
+    }
+
+        /* Adjust font size for "Communication" on smaller screens */
+        .skills-col h3.communication {
+            font-size: 10.5px;
+        }
+}
+
+
+
 
 
 /*---employment history---*/
@@ -316,6 +414,13 @@ h2{
     align-items: center;
 }
 
+/* Media query for smaller screens */
+@media only screen and (max-width: 700px) {
+    .qualification-content h2 {
+        text-indent: -102px; /* Center h2 text on smaller screens */
+    }
+}
+
 /*---Interests---*/
 /* styles.css */
 .interests-text{
@@ -373,6 +478,24 @@ h2{
     opacity: 1;
 }
 
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        gap: 20px; /* Adjust the gap between stacked images */
+    }
+
+    .image-box {
+        width: 80%; /* Make image boxes 80% width on smaller screens */
+        margin: 0 auto 20px; /* Center image boxes horizontally and add space between stacked images */
+    }
+
+    .image-box img {
+        width: 100%; /* Make images fill the width of their container */
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
+}
+
 
 /*---call to action---*/
 .cta{
@@ -391,6 +514,20 @@ h2{
     margin-bottom: 40px;
     padding: 0;
 }
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .cta {
+        background-size: 100% 100%; /* Make the background image cover the entire container */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+        background-position: center top; /* Position the background image at the center vertically and at the top horizontally */
+    }
+    }
+
+    .cta h1 {
+        font-size: 20px;
+    }
+
 
 /*------Home page - email me and call me buttons------*/
 
@@ -607,6 +744,7 @@ h2{
     margin-bottom: 0%;
     padding: 50px 12px;
     box-sizing: border-box;
+    height: 100%; /* Make the height equal to the parent container */
 }
 
 .project-col-text:hover{
@@ -650,6 +788,7 @@ h2{
     margin-bottom: 3.7%;
     padding: 149px 12px;
     box-sizing: border-box;
+    height: 100%; /* Make the height equal to the parent container */
 }
 
 .project-col2-text:hover{
@@ -663,12 +802,15 @@ h2{
     margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
+    position: relative;
 }
 
 .projects-email img {
     width: 108%;
     margin-top: -6%;
     margin-left: 0%;
+    position: relative; /* Add position relative to the image */
+    z-index: 1;
 }
 
 .projects-email .row {
@@ -691,7 +833,8 @@ h2{
     margin-top: -32px;
     padding: 30px;
     box-sizing: border-box;
-    height: 1080px;
+    height: 102.5%; /* Make the height equal to the parent container */
+    z-index: 0;
 }
 
 .project-col-email-text:hover {
@@ -709,16 +852,20 @@ h2{
     margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
+    position: relative; 
 }
 
 .project-col3{
     flex: 48%;
     padding: 30px 2px;
+    position: relative;
 }
 
 .project-col3 img{
     width: 100%;
     margin-top: -6%;
+    position: relative; /* Add position relative to the image */
+    z-index: 1; /* Set a higher z-index for the image */
 }
 
 .project-col3 h1{
@@ -738,6 +885,7 @@ h2{
     margin-bottom:3.5%;
     padding: 242px 12px;
     box-sizing: border-box;
+    height: 100%; /* Make the height equal to the parent container */
 }
 
 .project-col3-text:hover{
@@ -759,6 +907,8 @@ h2{
     width: 108%;
     margin-top: -6%;
     margin-left: 0%;
+    position: relative; /* Add position relative to the image */
+    z-index: 1; /* Set a higher z-index for the image */
 }
 
 .projects-welcome-flow .row {
@@ -781,7 +931,8 @@ h2{
     margin-top: -32px;
     padding: 30px;
     box-sizing: border-box;
-    height: 918px;
+    height: 100%; /* Make the height equal to the parent container */
+    z-index: 0;
 }
 
 .project-col-welcome-flow-text:hover {
@@ -854,6 +1005,8 @@ h2{
     width: 108%;
     margin-top: -6%;
     margin-left: 0%;
+    position: relative; /* Add position relative to the image */
+    z-index: 1; /* Set a higher z-index for the image */
 }
 
 .projects-welcome-email .row {
@@ -876,7 +1029,8 @@ h2{
     margin-top: -32px;
     padding: 30px;
     box-sizing: border-box;
-    height: 1355px;
+    height: 102%; /* Make the height equal to the parent container */
+    z-index: 0;
 }
 
 .project-col-welcome-email-text:hover {
@@ -923,7 +1077,7 @@ h2{
     margin-top: -32px;
     padding: 6px;
     box-sizing: border-box;
-    height: 1412px;
+    height: 102%; /* Make the height equal to the parent container */
 }
 
 .project-col-welcome-email2-text:hover {
@@ -968,8 +1122,11 @@ h2{
 .project-col-facebook-file-text {
 
     margin-right: 45px;
-    margin-top: -46px;
+    margin-top: 0px;
+}
 
+.project-col-facebook-file {
+    margin-top: 20px; /* Adding margin-top to move the image down */
 }
 
 /*--Reptile facebook ad*/
@@ -1010,6 +1167,7 @@ h2{
     margin-top: 52px;
     padding: 60px 12px;
     box-sizing: border-box;
+    height: 100%; /* Make the height equal to the parent container */
 }
 
 .project-colFA-text:hover{
@@ -1024,7 +1182,7 @@ h2{
 
 
 
-/*--Baby Shower Signage*/
+/*--Baby Shower Signage
 
 .babyshower {
     display: flex;
@@ -1059,7 +1217,7 @@ h2{
     margin-right: 45px;
     margin-top: -19px;
 
-}
+} */
 
 
 
@@ -1095,6 +1253,7 @@ h2{
     margin-top: 52px;
     padding: 15px 12px;
     box-sizing: border-box;
+    height: 100%; /* Make the height equal to the parent container */
 }
 
 .project-col4-text:hover{
@@ -1106,6 +1265,186 @@ h2{
     align-items: center; /* Center vertically */
     margin-top: 20px; /* Adjust as needed */
 }
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .Projects-4 {
+        width: 90%; /* Adjust the width as needed */
+    }
+
+    .project-col4 {
+        flex: 100%; /* Make it full width on smaller screens */
+        padding: 15px 2px; /* Adjust padding as needed */
+    }
+
+    iframe {
+        width: 100%; /* Make the iframe full width */
+        height: 250px; /* Adjust the height as needed */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .projects-email .row {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+
+    .projects-email .project-col-email {
+        margin-left: -8%; /* Adjust the left margin of the column containing the image */
+    }
+
+    .projects-welcome-flow .project-col-welcome-flow,
+    .projects-welcome-email .project-col-welcome-email,
+    .projects-welcome-email2 .project-col-welcome-email2 {
+        margin-left: -8%;
+        margin-right: 0%;
+        padding-left: 8%;
+        padding-right: 7.5%;
+    }
+
+    .projects-welcome-email2 .project-col-welcome-email2 {
+        width: 100%; /* Ensure full width on smaller screens */
+        margin-left: 0; /* Reset left margin */
+        margin-right: 0; /* Reset right margin */
+        padding-left: 0%; /* Adjust padding as needed */
+        padding-right: 4%; /* Adjust padding as needed */
+    }
+
+    .project-col2-text {
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 10%;
+    }
+
+    .project-col-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 10%;
+    }
+
+    .project-col3-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 10%;
+    }
+
+    .project-col-email-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 5%;
+    }
+
+    .project-col-email{
+        padding-top: 5%;
+    }
+
+    .project-col-welcome-flow-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 5%;
+        margin-bottom: 5%;
+    }
+
+    .project-col-welcome-flow{
+        padding-top: 5%;
+    }
+
+    .project-SUF-col3-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 10%; 
+    }
+
+    .project-col-welcome-email-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 10%; 
+        margin-bottom: 5%;
+    }
+
+    .project-col-welcome-email{
+        margin-top: 5%;
+    }
+
+    .project-col-welcome-email2-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 10%; 
+        margin-bottom: 5%;
+    }
+    
+    .project-col-welcome-email-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 10%; 
+        margin-bottom: 5%;
+    }
+
+    .project-col-welcome-email2-text{
+        padding: 50px 12px; /* Adjust padding as needed */
+        padding-bottom: 10%; 
+        margin-bottom: 5%;
+    }
+
+    .projects-facebook-file .row {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .project-col-facebook-file-text,
+    .project-col-facebook-file {
+        width: 100%; /* Make each column full width */
+        text-align: center; /* Center the content */
+    }
+
+    .projects-facebook-file .project-col-facebook-file {
+        margin-top: 20px; /* Add margin between the images */
+    }
+
+/* Adjust margin for the image */
+.project-col-email img {
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.project-col-welcome-email2 img {
+    margin: 0 auto;
+}
+
+
+    .projects-email,
+    .projects-welcome-flow,
+    .projects-welcome-email,
+    .projects-welcome-email2 {
+        flex-direction: column;
+    }
+
+    .project-col4-text,
+    .project-col4,
+    .project-col-text,
+    .project-col,
+    .project-col2-text,
+    .project-col2,
+    .project-col3-text,
+    .project-col3,
+    .project-col-email-text,
+    .project-col-email,
+    .project-col-welcome-flow-text,
+    .project-col-welcome-flow,
+    .project-SUF-col3-text,
+    .project-SUF-col3,
+    .project-col-welcome-email-text,
+    .project-col-welcome-email,
+    .project-col-welcome-email2-text,
+    .project-col-welcome-email2 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        flex: 100%;
+    }
+
+        .project-col4-text,
+        .project-col2-text,
+        .project-col3-text,
+        .project-col-email-text,
+        .project-col-welcome-flow-text,
+        .project-SUF-col3-text,
+        .project-col-welcome-email-text,
+        .project-col-welcome-email2-text {
+            order: -1;
+        }
+    }
+    
 
 
 
@@ -1125,14 +1464,6 @@ h2{
 .contact-header h1{
     margin-top: 0px;
 }
-
-
-
-
-
-
-
-
 
 /*--CERTIFICATIONS ---*/
 
@@ -1253,11 +1584,11 @@ margin-top: 10px;
 }
 
 .card-content .Google-text + .hero-btn {
-    margin-top: 67px;
+    margin-top: 80px;
 }
 
 .card-content .hubspot-text + .hero-btn {
-    margin-top: 67px;
+    margin-top: 80px;
 }
 
 .card .hubspot-text {
@@ -1269,7 +1600,7 @@ margin-top: 10px;
 }
 
 .card-content .bcs-text1 + .hero-btn {
-    margin-top: 50px; /* Add margin above the button */
+    margin-top: 60px; /* Add margin above the button */
 }
 
 .card-content .bcs-text + .hero-btn {
