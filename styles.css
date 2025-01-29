@@ -1444,7 +1444,157 @@ h2{
             order: -1;
         }
     }
+ 
+
+
+
+    /*--------------UPTIME APP-----------------------*/
+
+.Projects-4-1{
+    width: 80%;
+    margin: auto;
+    margin-top: -60px;
+    padding-top: 60px;
+    padding-bottom: 50px
+}
+
+.project-col4-1{
+    flex: 48%;
+    padding: 30px 2px;
+}
+
+.project-col4-1 h1{
+    padding-top: 0;
+}
+
+.project-col4-1 p{ 
+    padding: 15px 0 25px;
+}
+
+/*^^^^pink background on text*/
+
+.project-col4-1-text{
+    flex-basis: 51%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-top: 52px;
+    padding: 15px 12px;
+    box-sizing: border-box;
+    height: 100%; /* Make the height equal to the parent container */
+}
+
+.project-col4-1-text:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .Projects-4-1 {
+        width: 90%; /* Adjust the width as needed */
+    }
+
+    .project-col4-1 {
+        flex: 100%; /* Make it full width on smaller screens */
+        padding: 15px 2px; /* Adjust padding as needed */
+    }
+
+    iframe {
+        width: 100%; /* Make the iframe full width */
+        height: 250px; /* Adjust the height as needed */
+    }
+}
     
+/*-----------------------GIFS-----------------------------------------------------------*/
+/* Social Media Email Section */
+.GIF1 {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.GIF1 img {
+    max-width: 70%; /* Smaller video size */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: -6%; /* Original margin */
+    margin-left: 25%; /* Move GIF slightly to the right */
+}
+
+.GIF1 .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 96%;
+}
+
+.GIF1-col,
+.GIF1-text {
+    flex: 1;
+}
+
+.GIF1-text {
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-right: -50px;
+    margin-top: -32px;
+    padding: 6px;
+    box-sizing: border-box;
+    height: 130%; /* Align with the height of parent container */
+}
+
+.GIF1-text:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.subjectline-previewtext {
+    line-height: 0;
+}
+
+/* Container for the row of 3 videos */
+.GIF-row .row {
+    display: flex; /* Use flex layout */
+    justify-content: center; /* Center videos in the row */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%; /* Full width of the container */
+    gap: 2%; /* Optional: space between videos */
+}
+
+/* Common styles for all videos */
+.video {
+    display: block; /* Make videos block-level for easier stacking */
+    max-width: 60%; /* Adjust the max-width for desktop */
+    margin: 0 auto; /* Center the video */
+    padding-bottom: 10px; /* Space below the video */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .GIF-row .row {
+        flex-direction: column; /* Stack videos vertically */
+        align-items: center; /* Center videos horizontally */
+        gap: 10px; /* Space between videos when stacked */
+    }
+    
+    .video {
+        max-width: 90%; /* Allow videos to take up most of the width on small screens */
+        margin: 0 auto; /* Center the video */
+    }
+}
+
+.row{
+gap: -10px;
+}
+
+
 
 
 
